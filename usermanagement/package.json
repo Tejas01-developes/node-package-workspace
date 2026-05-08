@@ -1,0 +1,12 @@
+{
+  "name": "usermanagement",
+  "packageManager": "yarn@4.12.0",
+  "type": "module",
+  "dependencies": {
+    "databaseconnect": "workspace:*",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6"
+  }
+}
