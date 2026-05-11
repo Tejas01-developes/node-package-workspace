@@ -3,6 +3,7 @@ import dbconnection from '@packages/databaseconnect';
 import router from './routes/routes.js';
 import dotenv from "dotenv";
 import cors from 'cors'
+import helmet from 'helmet';
 dotenv.config();
 
 
@@ -12,6 +13,7 @@ export const app=express();
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
+app.use(helmet())
 app.use(cors({
 origin:"http://localhost:5173",
 credentials:true,
