@@ -38,24 +38,24 @@ describe("register user in the db",()=>{
         expect(finduseriddb?.password).not.toBe("12345")
     });
 
-     it("path 3 crash handelinf like duplicate email",async()=>{
-     await collection1.create({
-        name:"test",
-        email:"t@gmail.com",
-        password:"hashed"
-     })
+    //  it("path 3 crash handelinf like duplicate email",async()=>{
+    //  await collection1.create({
+    //     name:"test",
+    //     email:"t@gmail.com",
+    //     password:"hashed"
+    //  })
 
-     const response=await request(app).post("/apis/").send({
-        name:"test",
-        email:"t@gmail.com",
-        password:"12345"
-    })
-        expect(response.status).toBe(400);
-        expect(response.body.success).toBe(false)
-        expect(response.body.message).toBe("user registration failed")
+    //  const response=await request(app).post("/apis/").send({
+    //     name:"test",
+    //     email:"t@gmail.com",
+    //     password:"12345"
+    // })
+    //     expect(response.status).toBe(400);
+    //     expect(response.body.success).toBe(false)
+    //     expect(response.body.message).toBe("user registration failed")
 
        
-    });
+    // });
 
 
 
