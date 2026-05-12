@@ -1,5 +1,5 @@
 import express from 'express';
-import dbconnection from '@packages/databaseconnect';
+// import dbconnection from '@packages/databaseconnect';
 import router from './routes/routes.js';
 import dotenv from "dotenv";
 import cors from 'cors'
@@ -23,6 +23,6 @@ allowedHeaders: ["Content-Type", "Authorization"]
 app.use("/apis",router);
 
 app.listen(3000,async()=>{
-await dbconnection.connect();
+// await dbconnection.connect();
 console.log("server started on the port 3000")
 })
